@@ -14,9 +14,9 @@ pipeline {
             steps{
                 echo "The responsible of this project is ${AUTHOR} and and will be deployed in ${ENVIRONMENT}"
                 //Fisrt, drop the directory if exists
-                bat 'rmdir /s /q \home'
+                bat 'rmdir /s /q \\home'
                 //Create the directory
-                bat 'mkdir \home\jenkin\sweb'
+                bat 'mkdir \\home\\jenkin\\sweb'
                 
             }
         }
@@ -35,7 +35,7 @@ pipeline {
         stage('Copy the web application to the container directory') {
             steps {
                 echo 'Copying web application...'             
-                bat 'copy \home\jenkin\sweb\* /home/jenkins/web'
+                bat 'copy \\home\\jenkin\\sweb\\* /home/jenkins/web'
             }
         }
         stage('Checking the app') {
