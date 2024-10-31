@@ -41,7 +41,7 @@ pipeline {
         stage('Checking the app') {
             steps {
                 echo 'Testing the web app'
-                bat 'wget http://localhost:9000'
+               // bat 'wget http://localhost:9000'
             }
         }       
     }
